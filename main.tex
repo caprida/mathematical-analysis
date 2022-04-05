@@ -1,0 +1,42 @@
+\documentclass[12pt,cmcyralt]{article}
+\usepackage{cmap}     % поиск в PDF
+\usepackage[T2A]{fontenc}   % кодировка
+\usepackage[utf8]{inputenc}   % кодировка исходного текста
+\usepackage[english,russian]{babel} % локализация и переносы
+\usepackage{amsmath}                         %Подключает математический пакет
+\usepackage{amsfonts}                          %Математические шрифты
+ \usepackage{amsmath,amsthm,amssymb} 
+\usepackage{color}                                      % Для цветного текста 
+\usepackage[utf8]{inputenc}
+
+\title{Лабораторная работа №1}
+\author{Подготовлено Дарьей Вершицкой }
+\date{Апрель 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Условие}
+Вычислить интеграл 
+$$\oint_{C} {e^z \over {(z-1)^2(z+2)} } dz $$
+в следующих заданиях контура:
+ $1) \ |z-i| = 2;  $
+ $2)\ |z+2-i| = 3$
+ 
+ \section{Решение}
+ Особые точки подынтегральной функции: i кратности 2, -2.
+\\ 1). В указанную область попадает точка i
+\\ 
+$$\oint_{C} {e^z \over {(z-1)^2(z+2)} } dz = \oint_{|z-i| = 2} {{e^z\over {z+2}}\over(z-i)^2} dz = 2\pi i f \prime (i) = 2\pi i( \frac{e^z(z+2) - e^z}{(z+2)^2} )|_i = 2\pi i \frac{e^i(1+i)}{(i+2)^2} $$
+\\ 2). В указанную область попадают точки i, -2
+$$\oint_{C} {e^z \over {(z-1)^2(z+2)} } dz = \oint_{C_1} {e^z \over {(z-1)^2(z+2)} } dz + \oint_{C_2} {e^z \over {(z-1)^2(z+2)} } dz,$$
+где $C_1 и C_2 $ 
+- границы непересекающихся областей точек i и -2;
+
+\begin{gathered}
+\oint_{C} {e^z \over {(z-1)^2(z+2)} } dz = \oint_{C_1} {{e^z\over {z+2}}\over(z-i)^2} dz + \oint_{C_2} {{e^z\over {(z-i)^2}}\over z+2} dz = 2\pi i \frac{e^i(1+i)}{(i+2)^2} +2\pi i \frac{e^z} {(z-i)^2} |_{-2} = \\ = 2\pi i \frac{e^i(1+i)}{(i+2)^2} +  2\pi i  \frac{e^{-2}}{(i+2)^2} = \frac{2\pi i}{(i+2)^2}(e^i(1+i) + e^{-2})
+\end{gathered}
+
+
+\end{document}
